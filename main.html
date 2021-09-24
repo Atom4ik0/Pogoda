@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Погода</title>
+
+    <script scr-"eel.js"></script>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <input id="location" type="text" placeholder="Ведіть назву країни і міста ..." required="Тернопіль, Україна">
+
+    <button id="show">Дізнатись погоду</button>
+
+    <div class="info"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.jas"></script>
+    <script type="text/jacascript">
+
+      async function display_weather() {
+        Let place = document.getElementById('location').value;
+
+        Let res = await eel.get_weather(place)();
+        document..getElementById('info').innerHTML = res;
+      }
+
+      jQuery('#show').on('click', function() {
+
+        display_weather();
+      });
+    </script>
+    </body>
+</html>
